@@ -9,6 +9,7 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public AudioSource sadHampter;
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
@@ -25,5 +26,6 @@ public class LogicScript : MonoBehaviour
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+        sadHampter.Play();
     }
 }
