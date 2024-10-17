@@ -10,12 +10,14 @@ public class PipeSpawnScript : MonoBehaviour
     public float heightOffset = 10;
     public GameObject gameOverScreen;
     public LogicScript logic;
+    // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         SpawnPipe();
     }
 
+    // Update is called once per frame
     void Update()
     {
 
