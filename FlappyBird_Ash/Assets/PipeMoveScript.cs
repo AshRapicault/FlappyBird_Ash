@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PipeMoveScript : MonoBehaviour
 {
-    public float moveSpeed = 5;
     public float deadZone = -50;
     public GameObject gameOverScreen;
     public LogicScript logic;
@@ -22,7 +21,7 @@ public class PipeMoveScript : MonoBehaviour
             return;
         }
 
-        transform.position = transform.position + (Vector3.left * moveSpeed * Time.deltaTime);
+        transform.position = transform.position + (Vector3.left * Time.deltaTime) * 9;
 
         if (transform.position.x < deadZone)
         {
